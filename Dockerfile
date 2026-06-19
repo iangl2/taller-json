@@ -12,7 +12,7 @@ FROM php:8.2-apache
 RUN a2enmod rewrite
 
 # Copiar el código fuente al directorio raíz de Apache
-COPY src/ /var/www/html/
+COPY . /var/www/html/
 
 # Configurar permisos correctos
 RUN chown -R www-data:www-data /var/www/html \
